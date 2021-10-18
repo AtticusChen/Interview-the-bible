@@ -30,9 +30,10 @@
     Docker cp命令用于容器与主机之间的数据拷贝
     主机到容器：docker cp /www 96f7f14e99ab:/www/
     容器到主机：docker cp 96f7f14e99ab:/www /tmp
-#### 9.有什么方法确定一个 Docker 容器运行状态
-    docker ps -a
+#### 9.有什么方法确定一个 Docker 容器运行状态 docker ps -a
     这将列表形式输出运行在主机上的所有 Docker 容器及其运行状态。
     从这个列表中很容易找到 想要的容器及其运行状态。
 #### 10.如何停止所有正在运行的容器？
     使用docker kill $(sudo docker ps -q)
+#### 11.如何清理批量后台停止的容器？
+    使用docker rm $（sudo docker ps -a -q）
